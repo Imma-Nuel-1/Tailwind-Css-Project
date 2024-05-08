@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              subscript: ["Inconsolata", "san-serif"],
+            }
+            colors: {
+              primarycolor: "white",
+              secondarycolor: "blue",
+              kgcolor: "grey",
+              dotcolor: "brown",
+            },
+            animation: {
+              wiggle: "wiggle 1s ease-in-out infinite",
+            },
+            keyframes: {
+              wiggle: {
+                "0%, 100%": { transform: "rotate(-10deg)" },
+                "50%": { transform: "rotate(10deg)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- adding header -->
+    <div class="w-full p-4 bg-red-300 sticky top-0 text-white">
+      <!-- adding logo -->
+      <nav class="flex justify-between mr-10">
+        <h3 class="text-lg font-bold">
+          A<span class="text-dotcolor">.</span>PICK
+        </h3>
+        <div class="ml-10 font-subscript"></div>
+        <div class="hidden md:flex">
+          <div
+            class="ml-10 text-sm capitalize font-subscript hover:animate-wiggle hover:text-secondarycolor font-bold"
+          >
+            HOME
+          </div>
+          <div
+            class="ml-10 text-sm capitalize font-subscript hover:animate-wiggle hover:text-secondarycolor font-bold"
+          >
+            ABOUT
+          </div>
+          <div
+            class="ml-10 text-sm capitalize font-subscript hover:animate-wiggle hover:text-secondarycolor font-bold"
+          >
+            SKILLS
+          </div>
+          <div
+            class="ml-10 text-sm capitalize font-subscript hover:animate-wiggle hover:text-secondarycolor font-bold"
+          >
+            PROJECTS
+          </div>
+          <div
+            class="ml-10 text-sm capitalize font-subscript hover:animate-wiggle hover:text-secondarycolor font-bold"
+          >
+            CONTACT
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- hero section -->
+    <div id="home" class="w-full h-[50vh] text-center mt-10">
+      <div
+        class="max-w-[1240px] w-full mx-auto p-2 flex justify-center items-center"
+      >
+        <div>
+          <p class="uppercase text-sm text-grey-600">
+            It's great to have you here 😊
+          </p>
+          <h2 class="py-4 text-kgcolor text-lg font-bold">
+            Hi, I am <span class="text-[#5651e5]">Emmanuel</span>
+          </h2>
+          <h2 class="py-2 text-grey-700 font-bold">A Full-stack Developer</h2>
+          <p class="py-4 text-grey-600 max-w[70%] m-auto">
+            I am a full-stack dveloper with a good knowledge in <br />
+            building web application
+          </p>
+
+          <!-- Icon Connection Section -->
+          <div class="flex justify-between items-center m-auto max-w-[300px]">
+            <div
+              class="rounded-full shadow-lg shadow-gray-600 p-6 cursor-pointer hover:scale-105 ease-in duration-300"
+            >
+              <a href=""><ion-icon name="logo-github"></ion-icon></a>
+            </div>
+            <div
+              class="rounded-full shadow-lg shadow-gray-600 p-6 cursor-pointer hover:scale-105 ease-in duration-300"
+            >
+              <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+            </div>
+            <div
+              class="rounded-full shadow-lg shadow-gray-600 p-6 cursor-pointer hover:scale-105 ease-in duration-300"
+            >
+              <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+            </div>
+            <div
+              class="rounded-full shadow-lg shadow-gray-600 p-6 cursor-pointer hover:scale-105 ease-in duration-300"
+            >
+              <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- hero section -->
+    <div
+      class="max-w-[1240px] m-auto grid grid-cols-1 md:grid grid-cols-3 gap-8"
+    >
+      <div class="col-span-2">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+          similique voluptas beatae magnam dolores, quam laudantium voluptatibus
+          eveniet explicabo totam enim laboriosam distinctio molestiae
+          reprehenderit consequuntur inventore veniam rem nobis impedit ducimus
+          soluta vero dolorem qui nisi! Impedit, asperiores eligendi iusto
+          dolorem deserunt delectus hic ex molestias laborum dolorum, deleniti
+          totam amet obcaecati ipsam a modi reprehenderit nobis quis? Nostrum
+          provident eos nemo facilis iure ea suscipit adipisci beatae distinctio
+          inventore reprehenderit rem, nihil atque, accusamus ab quo cum
+          molestias saepe magnam voluptatum quaerat! Recusandae beatae
+          reiciendis deleniti voluptatum corporis quis, exercitationem ducimus
+          molestiae et iure magni, architecto quia veniam?
+        </p>
+      </div>
+      <div class="">
+        <img
+          src="https://images.unsplash.com/photo-1552508744-1696d4464960?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cXVvdGV8ZW58MHwwfDB8fHww"
+          alt="Quote"
+          class="h-30"
+        />
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section class="bg-gray-200 py-16">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">Skills</h2>
+        <div class="grid grid-cols-3 gap-4">
+          <div class="p-4 bg-white shadow-md rounded-lg">HTML</div>
+          <div class="p-4 bg-white shadow-md rounded-lg">CSS</div>
+          <div class="p-4 bg-white shadow-md rounded-lg">JavaScript</div>
+          <!-- Add more skills here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-16">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
+        <div class="grid grid-cols-3 gap-8">
+          <!-- Project Cards -->
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img
+              class="w-full"
+              src="images/Tailwind-project.png"
+              alt="Project 1"
+            />
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">Tailwind Css Project</div>
+              <p class="text-gray-700 text-base">
+                Tailwind CSS is a utility-first CSS framework for rapidly
+                building custom user interfaces. It's a collection of low-level
+                utility classes that let you build completely custom designs
+                without ever leaving your HTML.
+              </p>
+            </div>
+          </div>
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full" src="images/Html-project.png" alt="Project 1" />
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">Html Project</div>
+              <p class="text-gray-700 text-base">
+                HTML (HyperText Markup Language) is the standard markup language
+                for creating web pages and web applications. It is used to
+                describe the structure and content of a web page, such as
+                headings, paragraphs, links, images, and forms.
+              </p>
+            </div>
+          </div>
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full" src="images/css-project.png" alt="Project 1" />
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">Css Project</div>
+              <p class="text-gray-700 text-base">
+                CSS (Cascading Style Sheets) is a style sheet language used for
+                describing the presentation of a document written in HTML or
+                XML. It is used to define the layout, colors, fonts, and other
+                visual aspects of a web page.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="bg-gray-300 py-16">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center">Contact Me</h2>
+        <form class="max-w-md mx-auto">
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="name"
+              >Name</label
+            >
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="name"
+              type="text"
+              placeholder="Your Name"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="email"
+              >Email</label
+            >
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              type="email"
+              placeholder="Your Email"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="message"
+              >Message</label
+            >
+            <textarea
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="message"
+              rows="5"
+              placeholder="Your Message"
+            ></textarea>
+          </div>
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="button"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-4">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <div>
+          <span class="text-gray-400">&copy; 2024 A Pick</span>
+        </div>
+        <div>
+          <a href="#" class="text-gray-400 hover:text-white">
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.93c-.06.47-.23.9-.48 1.3-.23.38-.55.71-.93.95-.37.23-.8.4-1.26.48-.46.07-.94.05-1.41-.08-.47-.14-.93-.36-1.36-.65-.42-.3-.79-.67-1.1-1.1-.3-.42-.52-.88-.66-1.36-.13-.47-.15-.95-.08-1.41.08-.46.25-.89.48-1.26.23-.38.56-.7.95-.93.38-.25.82-.42 1.3-.48.47-.07.95-.05 1.41.08.47.13.93.36 1.36.65.42.3.79.67 1.1 1.1.3.42.52.88.66 1.36.13.47.15.95.08 1.41-.07.46-.24.89-.48 1.26-.23.38-.56.7-.95.93-.37.24-.79.41-1.26.48zM17 12.03c0 1.14-.3 2.19-.88 3.12-.58.93-1.37 1.67-2.33 2.23-.96.55-2.04.83-3.21.83-.84 0-1.65-.18-2.42-.53-.77-.35-1.43-.83-1.98-1.41-.55-.58-.99-1.26-1.31-2.03-.31-.77-.47-1.59-.47-2.46 0-.87.16-1.69.47-2.46.32-.77.76-1.45 1.31-2.03.55-.58 1.21-1.06 1.98-1.41.77-.35 1.58-.53 2.42-.53.9 0 1.72.25 2.45.74.73.49 1.33 1.16 1.79 1.99l-1.45 1.45c-.24-.47-.56-.84-.97-1.11-.41-.27-.89-.4-1.41-.4-.53 0-1.02.17-1.49.51-.46.34-.82.8-1.09 1.38-.27.57-.4 1.18-.4 1.82s.13 1.26.4 1.82c.27.57.63 1.03 1.09 1.38.47.34.96.51 1.49.51.52 0 1-.13 1.41-.4.41-.27.73-.64.97-1.11l1.45 1.45c-.46.83-1.06 1.5-1.79 1.99-.73.49-1.55.74-2.45.74-.91 0-1.75-.25-2.51-.74-.76-.49-1.37-1.16-1.83-2-.46-.83-.69-1.73-.69-2.67s.23-1.84.69-2.67c.46-.83 1.07-1.51 1.83-2 1.19-.76 2.53-1.14 4-1.14 1.47 0 2.81.38 4 1.14.76.49 1.37 1.17 1.83 2 .46.83.69 1.73.69 2.67z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white ml-4">
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M21.3 2.3c-.4-.4-1-.4-1.4 0l-2.3 2.3C17.7 4.1 17 4.5 16 4.5c-1.1 0-1.7-.6-2.2-1.1L9 2.3C8.6 1.9 8 1.9 7.7 2.3c-.4.4-.4 1 0 1.4l2.3 2.3c-.8.7-1.5 1-2.3 1-1.9 0-3.5-1.6-3.5-3.5S4.1 0 6 0c1 0 1.7.4 2.3 1l2.5 2.5C11.8 3.4 12.4 3 13.5 3c1.4 0 2.5 1.1 2.5 2.5 0 .9-.4 1.7-1 2.3l-2.3 2.3c-.4.4-.4 1 0 1.4.2.2.4.3.7.3s.5-.1.7-.3l5.5-5.5c.4-.4.4-1 0-1.4z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  </body>
+</html>
